@@ -1,0 +1,45 @@
+{
+  "name": "alumni-programme",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.14"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/start.js",
+    "db:init": "node --env-file-if-exists=.env scripts/init.js",
+    "db:seed": "node --env-file-if-exists=.env scripts/seed-demo.js",
+    "dev": "vite --config web/vite.config.mjs",
+    "build": "tsc -p web --noEmit && vite build --config web/vite.config.mjs",
+    "test": "jest --runInBand --selectProjects unit api web",
+    "test:integration": "node --env-file-if-exists=.env.test node_modules/jest/bin/jest.js --runInBand --selectProjects integration",
+    "test:browser": "node --env-file-if-exists=.env.test --test --test-concurrency=1 tests/browser/portal.test.cjs tests/browser/demo.test.cjs tests/browser/workflows.test.cjs",
+    "test:ui": "node --test tests/browser/layout.test.cjs",
+    "test:coverage": "node --env-file-if-exists=.env.test node_modules/jest/bin/jest.js --runInBand --coverage",
+    "test:load": "node --env-file-if-exists=.env.test scripts/load.js",
+    "verify": "node scripts/verify.js"
+  },
+  "dependencies": {
+    "@fontsource/dm-serif-text": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0",
+    "mysql2": "^3.14.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "esbuild": "^0.28.2",
+    "jest": "^30.0.0",
+    "jest-environment-jsdom": "^30.5.2",
+    "playwright-core": "^1.65.1",
+    "sharp": "^0.35.5",
+    "supertest": "^7.1.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  }
+}
