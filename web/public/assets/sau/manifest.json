@@ -1,0 +1,164 @@
+{
+  "reviewedAt": "2026-11-18",
+  "assets": [
+    {
+      "id": "campus",
+      "category": "campus",
+      "title": "A home for South Asian scholarship",
+      "description": "South Asian University campus, Maidan Garhi, New Delhi.",
+      "author": "South Asian University, via Wikimedia Commons",
+      "year": "2025",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "crop": {
+        "left": 0.09,
+        "top": 0.08,
+        "width": 0.69,
+        "height": 0.67
+      },
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:South%20asian%20university%20campus%20photo.png",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/South_asian_university_campus_photo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "originalWidth": 2513,
+      "originalHeight": 1185,
+      "downloadedAt": "2026-11-18",
+      "permissionStatus": "Published open license verified on the Wikimedia file page",
+      "modifications": "Cropped to the campus architecture within the source video frame. Resized and converted to WebP. Display crops vary by composition. Derivatives retain the source license.",
+      "variants": [
+        {
+          "src": "/assets/sau/campus/sau-maidan-garhi-campus-640.webp",
+          "width": 640,
+          "height": 293,
+          "bytes": 50934
+        },
+        {
+          "src": "/assets/sau/campus/sau-maidan-garhi-campus-1280.webp",
+          "width": 1280,
+          "height": 585,
+          "bytes": 112950
+        },
+        {
+          "src": "/assets/sau/campus/sau-maidan-garhi-campus-1920.webp",
+          "width": 1325,
+          "height": 606,
+          "bytes": 116648
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "category": "student-life",
+      "title": "Celebrating together",
+      "description": "Indian and Pakistani students at a joint Independence Day celebration at SAU in 2013.",
+      "author": "Aheibam",
+      "year": "2013",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Students%20of%20South%20Asian%20University%2C%20New%20Delhi.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Students_of_South_Asian_University%2C_New_Delhi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "originalWidth": 5184,
+      "originalHeight": 3456,
+      "downloadedAt": "2026-11-18",
+      "permissionStatus": "Published open license verified on the Wikimedia file page",
+      "modifications": "Resized and converted to WebP. Display crops vary by composition. Derivatives retain the source license.",
+      "variants": [
+        {
+          "src": "/assets/sau/student-life/sau-independence-day-2013-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 50608
+        },
+        {
+          "src": "/assets/sau/student-life/sau-independence-day-2013-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 134014
+        }
+      ]
+    },
+    {
+      "id": "library",
+      "category": "infrastructure",
+      "title": "Where curiosity finds its home",
+      "description": "Entrance to the Prof. G. K. Chadha Library at SAU’s former campus, photographed in 2015.",
+      "author": "Almodabber",
+      "year": "2015",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Prof.%20G.%20K.%20Chadha%20Library.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Prof._G._K._Chadha_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "originalWidth": 3264,
+      "originalHeight": 2448,
+      "downloadedAt": "2026-11-18",
+      "permissionStatus": "Published open license verified on the Wikimedia file page",
+      "modifications": "Resized and converted to WebP. Display crops vary by composition. Derivatives retain the source license.",
+      "variants": [
+        {
+          "src": "/assets/sau/infrastructure/sau-chadha-library-2015-640.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 35992
+        },
+        {
+          "src": "/assets/sau/infrastructure/sau-chadha-library-2015-1280.webp",
+          "width": 1280,
+          "height": 960,
+          "bytes": 214902
+        }
+      ]
+    },
+    {
+      "id": "campus-plan",
+      "category": "institutional",
+      "title": "A campus imagined",
+      "description": "A 2014 architectural projection of the proposed Maidan Garhi campus.",
+      "author": "Aheibam",
+      "year": "2014",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Proposed%20Campus%20of%20SAU.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Proposed_Campus_of_SAU.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "originalWidth": 4796,
+      "originalHeight": 2994,
+      "downloadedAt": "2026-11-18",
+      "permissionStatus": "Published open license verified on the Wikimedia file page",
+      "modifications": "Resized and converted to WebP. Display crops vary by composition. Derivatives retain the source license.",
+      "variants": [
+        {
+          "src": "/assets/sau/institutional/sau-proposed-campus-concept-2014-640.webp",
+          "width": 640,
+          "height": 399,
+          "bytes": 58882
+        },
+        {
+          "src": "/assets/sau/institutional/sau-proposed-campus-concept-2014-1280.webp",
+          "width": 1280,
+          "height": 799,
+          "bytes": 165910
+        }
+      ]
+    }
+  ],
+  "pending": [
+    {
+      "category": "branding",
+      "sourcePage": "https://sau.int/media-coverages/media-downloads/",
+      "originalUrl": "https://sau.int/wp-content/themes/sau/images/sau_logo.gif",
+      "status": "Reference only. Explicit republication permission pending. Theme directory is disallowed by robots.txt."
+    },
+    {
+      "category": "events",
+      "sourcePage": "https://gallery.sau.ac.in/",
+      "status": "Reference only. All-rights-reserved institutional gallery. Written permission needed for local republication."
+    },
+    {
+      "category": "convocation",
+      "sourcePage": "https://sau.int/sau-films/second-convocation-2017/",
+      "status": "Reference only. Video archive linked without downloading media."
+    },
+    {
+      "category": "research",
+      "sourcePage": "https://sau.int/r-and-d/home/",
+      "status": "Verified information source. Additional photography permission pending."
+    }
+  ]
+}

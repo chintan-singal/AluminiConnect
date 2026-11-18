@@ -1,0 +1,102 @@
+{
+  "reviewedAt": "2026-11-18",
+  "name": "South Asian University",
+  "shortName": "SAU",
+  "location": "New Delhi, India",
+  "address": "Gaushala Road, Maidan Garhi, New Delhi 110068",
+  "phone": "+91 (11) 35656500",
+  "website": "https://sau.int/",
+  "facts": [
+    {
+      "label": "A regional university",
+      "text": "Established by the eight SAARC member nations to advance learning and collaboration across South Asia.",
+      "source": "https://sau.int/about/alumni-association/"
+    },
+    {
+      "label": "2007",
+      "text": "The agreement establishing SAU was signed in New Delhi on 4 April.",
+      "source": "https://sau.int/about/"
+    },
+    {
+      "label": "2010",
+      "text": "SAU welcomed its first students in August.",
+      "source": "https://sau.int/about/"
+    },
+    {
+      "label": "2023",
+      "text": "The university moved to its residential campus in Maidan Garhi in January.",
+      "source": "https://sau.int/about/"
+    }
+  ],
+  "mission": {
+    "text": "SAU brings learning and research together to deepen regional understanding, nurture leadership and strengthen South Asia's shared capacity.",
+    "source": "https://sau.int/about/vision/"
+  },
+  "countries": [
+    "Afghanistan",
+    "Bangladesh",
+    "Bhutan",
+    "India",
+    "Maldives",
+    "Nepal",
+    "Pakistan",
+    "Sri Lanka"
+  ],
+  "academics": {
+    "source": "https://sau.int/faculties-departments/",
+    "fields": [
+      "Economics",
+      "Legal Studies",
+      "International Relations",
+      "Sociology",
+      "Life Sciences & Biotechnology",
+      "Computer Science & Engineering",
+      "Mathematics",
+      "Management",
+      "Arts & Design",
+      "Physical Sciences",
+      "Chemical Sciences"
+    ],
+    "programmesSource": "https://sau.int/",
+    "programmeExamples": [
+      "MA Economics",
+      "MA International Relations",
+      "MA Sociology",
+      "LLM",
+      "MBA",
+      "MSc Climate Change & Sustainability",
+      "PhD programmes"
+    ]
+  },
+  "research": {
+    "source": "https://sau.int/r-and-d/home/",
+    "centresSource": "https://sau.int/",
+    "initiatives": [
+      "Institute of South Asian Studies",
+      "Interdisciplinary Centre on Climate Change",
+      "SAU Centre for Research & Innovative Learning"
+    ]
+  },
+  "resources": [
+    {
+      "title": "Research & scholarship",
+      "description": "Explore research and academic work at the university.",
+      "url": "https://sau.int/r-and-d/home/"
+    },
+    {
+      "title": "University news",
+      "description": "Read announcements and reports from SAU.",
+      "url": "https://sau.int/press-release/"
+    },
+    {
+      "title": "Training & placements",
+      "description": "Find the university's professional-development resources.",
+      "url": "https://sau.int/placements/"
+    },
+    {
+      "title": "Convocation archive",
+      "description": "Visit the university's convocation film archive.",
+      "url": "https://sau.int/sau-films/second-convocation-2017/"
+    }
+  ]
+}
