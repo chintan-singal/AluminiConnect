@@ -1,0 +1,13 @@
+.tabbar{display:none}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}aside{display:none}
+  .hero,.cols{grid-template-columns:1fr;gap:28px}
+  main{padding-bottom:96px}
+  .tabbar{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));justify-content:space-around;z-index:20}
+  .tabbar a{font-size:11px;color:var(--muted);text-align:center;padding:4px 8px;font-weight:500}
+  .tabbar a span{display:block;font-size:18px}.tabbar a.on{color:var(--maroon)}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px}
+  .gal figure:nth-child(1){grid-column:span 2;grid-row:span 1}
+  .ev{grid-template-columns:52px 1fr}.ev .btn{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
