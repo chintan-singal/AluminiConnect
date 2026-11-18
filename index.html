@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/hero.css">
 </head><body>
 <div class="layout">
 <aside>
@@ -24,7 +25,20 @@
     <button class="ico" aria-label="Messages">💬</button>
     <button class="ico" id="theme" aria-label="Toggle theme">◐</button>
   </div>
+  <div class="hero">
+    <div>
+      <h1 id="greet"></h1>
+      <p>Your batchmates, mentors and institution news in one place. Here’s what changed since you last visited.</p>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="prof">
+      <header><h3>Your profile</h3><span id="pct">0%</span></header>
+      <div class="bar"><i id="fill"></i></div>
+      <ul id="checks"></ul>
+    </div>
+  </div>
 </main></div>
 <script src="js/data.js"></script>
 <script src="js/utils.js"></script>
+<script src="js/profile.js"></script>
 </body></html>
