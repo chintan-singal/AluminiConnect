@@ -1,0 +1,71 @@
+const { test } = require('node:test')
+const assert = require('node:assert/strict')
+const fs = require('node:fs')
+const http = require('node:http')
+const { once } = require('node:events')
+const { chromium } = require('playwright-core')
+const { fixture } = require('../fixture')
+const { makeApp } = require('../../server/app')
+const { seedDemo } = require('../../scripts/seed-demo')
+const data = require('../../scripts/demo-data')
+
+test('seeded alumni, careers and conversations work through the actual website', { timeout: 90000 }, async () => {
+  const f = await fixture()
+  const server = http.createServer()
+  let browser
+  try {
+    await seedDemo(f.db, { password: f.password })
+    server.listen(0, '127.0.0.1')
+    await once(server, 'listening')
+    const origin = 'http://127.0.0.1:' + server.address().port
+    server.on('request', makeApp(f.db, { origin }))
+    const executablePath = process.env.BROWSER_PATH || [
+      'C:/Program Files/Google/Chrome/Application/chrome.exe',
+      'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
+      '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      '/usr/bin/google-chrome', '/usr/bin/chromium',
+    ].find(fs.existsSync)
+    browser = await chromium.launch({ headless: true, executablePath })
+    const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } })
+    const errors = []
+    page.on('pageerror', (error) => errors.push(error.message))
+    await page.goto(origin)
+    await page.getByLabel('Email', { exact: true }).fill(data.people[0].email)
+    await page.getByLabel('Password', { exact: true }).fill(f.password)
+    await page.getByRole('button', { name: /^Sign in/ }).click()
+    await page.getByRole('heading', { name: /Welcome back/ }).waitFor()
+    await page.getByRole('button', { name: /Welcome to your alumni/ }).waitFor()
+    const navigation = page.getByRole('navigation', { name: 'Main' })
+    await navigation.getByRole('button', { name: 'Mentors', exact: true }).click()
+    await page.getByRole('button', { name: 'View profile' }).first().waitFor()
+    assert.equal(await page.getByRole('button', { name: 'View profile' }).count(), 12)
+    await navigation.getByRole('button', { name: 'Careers', exact: true }).click()
+    await page.getByRole('button', { name: 'View Junior Backend Engineer' }).waitFor()
+    assert.equal(await page.locator('.career-card').count(), 6)
+    await page.getByLabel('Employment type').selectOption('internship')
+    await page.getByRole('button', { name: 'View Data Science Intern' }).waitFor()
+    assert.equal(await page.locator('.career-card').count(), 2)
+    await page.getByLabel('Employment type').selectOption('')
+    await page.getByLabel('Search opportunities').fill('Backend')
+    await page.getByRole('button', { name: 'View Junior Backend Engineer' }).click()
+    await page.getByRole('dialog', { name: 'Junior Backend Engineer' }).waitFor()
+    await page.getByRole('button', { name: 'Message alumnus' }).click()
+    await page.getByRole('heading', { name: 'Arjun Sen', exact: true }).waitFor()
+    await page.getByRole('button', { name: 'Send message' }).waitFor()
+    await page.setViewportSize({ width: 390, height: 850 })
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
+    await page.getByRole('button', { name: 'Open menu' }).click()
+    await navigation.getByRole('button', { name: 'Careers', exact: true }).click()
+    await page.getByRole('button', { name: 'View Junior Backend Engineer' }).waitFor()
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
+    await page.getByRole('button', { name: 'Open menu' }).click()
+    await navigation.getByRole('button', { name: 'My schedule', exact: true }).click()
+    await page.getByRole('button', { name: /Backend careers and interview practice/ }).waitFor()
+    assert.deepEqual(errors, [])
+  } finally {
+    await browser?.close()
+    server.closeAllConnections()
+    if (server.listening) await new Promise((resolve) => server.close(resolve))
+    await f.close()
+  }
+})
