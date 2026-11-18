@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/feed.css">
 </head><body>
 <div class="layout">
 <aside>
@@ -37,8 +38,14 @@
       <ul id="checks"></ul>
     </div>
   </div>
+  <div class="cols" id="news" style="padding-top:36px">
+    <div><div class="sh"><h2>Announcements</h2><a href="#news">View all</a></div><ul class="ann" id="ann"></ul></div>
+    <div id="events"><div class="sh"><h2>Upcoming events</h2><a href="#events">View all</a></div><div class="evs" id="evs"></div></div>
+  </div>
+  <div id="toast" role="status"></div>
 </main></div>
 <script src="js/data.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/profile.js"></script>
+<script src="js/feed.js"></script>
 </body></html>
