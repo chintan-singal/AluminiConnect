@@ -1,0 +1,6 @@
+.env.test not found. Continuing without it.
+Alumni portal listening on port 58941
+{"wave":"one-seat burst","users":1000,"errors":0,"p50ms":5686,"p95ms":9725,"p99ms":10143,"requestsPerSecond":97,"elapsedMs":10333,"p95BudgetMs":10000}
+{"confirmed":1,"waitlisted":999,"distinctTickets":999}
+{"wave":"mixed reads","users":1000,"errors":0,"p50ms":2058,"p95ms":2592,"p99ms":2618,"requestsPerSecond":373,"elapsedMs":2682,"p95BudgetMs":10000}
+Post-load health passed

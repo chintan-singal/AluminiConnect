@@ -1,0 +1,149 @@
+{
+  "startedAt": "2026-11-18T19:12:29.992Z",
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "release": "10.0.26300",
+    "cpu": "AMD Ryzen 7 4800H with Radeon Graphics         ",
+    "logicalCpus": 16,
+    "totalMemoryGiB": 7,
+    "timezone": "Asia/Calcutta"
+  },
+  "runs": [
+    {
+      "label": "jest",
+      "prefix": "01-jest",
+      "command": "node --env-file-if-exists=.env.test node_modules/jest/bin/jest.js --runInBand --coverage --json --outputFile=C:\\Users\\chint\\OneDrive\\Documents\\fsd_proj\\alumni-connect-portal\\repo\\output\\test-results\\2026-11-19\\01-jest.json --coverageDirectory=C:\\Users\\chint\\OneDrive\\Documents\\fsd_proj\\alumni-connect-portal\\repo\\output\\test-results\\2026-11-19\\01-jest-coverage --coverageReporters=text --coverageReporters=json-summary --coverageReporters=html --coverageReporters=lcov",
+      "startedAt": "2026-11-18T19:12:29.996Z",
+      "durationMs": 39513,
+      "exitCode": 1,
+      "logFile": "01-jest.log"
+    },
+    {
+      "label": "jest",
+      "prefix": "02-jest",
+      "command": "node --env-file-if-exists=.env.test node_modules/jest/bin/jest.js --runInBand --coverage --json --outputFile=C:\\Users\\chint\\OneDrive\\Documents\\fsd_proj\\alumni-connect-portal\\repo\\output\\test-results\\2026-11-19\\02-jest.json --coverageDirectory=C:\\Users\\chint\\OneDrive\\Documents\\fsd_proj\\alumni-connect-portal\\repo\\output\\test-results\\2026-11-19\\02-jest-coverage --coverageReporters=text --coverageReporters=json-summary --coverageReporters=html --coverageReporters=lcov",
+      "startedAt": "2026-11-18T19:15:11.554Z",
+      "durationMs": 42975,
+      "exitCode": 0,
+      "logFile": "02-jest.log"
+    },
+    {
+      "label": "typecheck",
+      "prefix": "03-typecheck",
+      "command": "node node_modules/typescript/bin/tsc -p web --noEmit",
+      "startedAt": "2026-11-18T19:17:14.607Z",
+      "durationMs": 3190,
+      "exitCode": 0,
+      "logFile": "03-typecheck.log"
+    },
+    {
+      "label": "build",
+      "prefix": "04-build",
+      "command": "node node_modules/vite/bin/vite.js build --config web/vite.config.mjs",
+      "startedAt": "2026-11-18T19:17:17.799Z",
+      "durationMs": 2471,
+      "exitCode": 0,
+      "logFile": "04-build.log"
+    },
+    {
+      "label": "browser",
+      "prefix": "05-browser",
+      "command": "node --env-file-if-exists=.env.test --test --test-concurrency=1 --test-reporter=tap tests/browser/portal.test.cjs tests/browser/demo.test.cjs tests/browser/workflows.test.cjs",
+      "startedAt": "2026-11-18T19:17:20.429Z",
+      "durationMs": 21226,
+      "exitCode": 0,
+      "logFile": "05-browser.log"
+    },
+    {
+      "label": "ui",
+      "prefix": "06-ui",
+      "command": "node --test --test-reporter=tap tests/browser/layout.test.cjs",
+      "startedAt": "2026-11-18T19:18:46.815Z",
+      "durationMs": 45730,
+      "exitCode": 0,
+      "logFile": "06-ui.log"
+    },
+    {
+      "label": "load",
+      "prefix": "07-load",
+      "command": "node --env-file-if-exists=.env.test scripts/load.js",
+      "startedAt": "2026-11-18T19:19:32.674Z",
+      "durationMs": 38495,
+      "exitCode": 1,
+      "logFile": "07-load.log"
+    },
+    {
+      "label": "load",
+      "prefix": "08-load",
+      "command": "node --env-file-if-exists=.env.test scripts/load.js",
+      "startedAt": "2026-11-18T19:23:01.795Z",
+      "durationMs": 23872,
+      "exitCode": 1,
+      "logFile": "08-load.log"
+    },
+    {
+      "label": "jest",
+      "prefix": "09-jest",
+      "command": "node --env-file-if-exists=.env.test node_modules/jest/bin/jest.js --runInBand --coverage --json --outputFile=C:\\Users\\chint\\OneDrive\\Documents\\fsd_proj\\alumni-connect-portal\\repo\\output\\test-results\\2026-11-19\\09-jest.json --coverageDirectory=C:\\Users\\chint\\OneDrive\\Documents\\fsd_proj\\alumni-connect-portal\\repo\\output\\test-results\\2026-11-19\\09-jest-coverage --coverageReporters=text --coverageReporters=json-summary --coverageReporters=html --coverageReporters=lcov",
+      "startedAt": "2026-11-18T19:24:22.508Z",
+      "durationMs": 43091,
+      "exitCode": 0,
+      "logFile": "09-jest.log"
+    },
+    {
+      "label": "load",
+      "prefix": "10-load",
+      "command": "node --env-file-if-exists=.env.test scripts/load.js",
+      "startedAt": "2026-11-18T19:26:21.757Z",
+      "durationMs": 24063,
+      "exitCode": 1,
+      "logFile": "10-load.log"
+    },
+    {
+      "label": "load",
+      "prefix": "11-load",
+      "command": "node --env-file-if-exists=.env.test scripts/load.js",
+      "startedAt": "2026-11-18T19:27:44.926Z",
+      "durationMs": 21694,
+      "exitCode": 0,
+      "logFile": "11-load.log"
+    },
+    {
+      "label": "load",
+      "prefix": "12-load",
+      "command": "node --env-file-if-exists=.env.test scripts/load.js",
+      "startedAt": "2026-11-18T19:28:06.722Z",
+      "durationMs": 30323,
+      "exitCode": 1,
+      "logFile": "12-load.log"
+    },
+    {
+      "label": "typecheck",
+      "prefix": "13-typecheck",
+      "command": "node node_modules/typescript/bin/tsc -p web --noEmit",
+      "startedAt": "2026-11-18T19:29:13.808Z",
+      "durationMs": 3789,
+      "exitCode": 0,
+      "logFile": "13-typecheck.log"
+    },
+    {
+      "label": "build",
+      "prefix": "14-build",
+      "command": "node node_modules/vite/bin/vite.js build --config web/vite.config.mjs",
+      "startedAt": "2026-11-18T19:29:17.598Z",
+      "durationMs": 3119,
+      "exitCode": 0,
+      "logFile": "14-build.log"
+    },
+    {
+      "label": "browser",
+      "prefix": "15-browser",
+      "command": "node --env-file-if-exists=.env.test --test --test-concurrency=1 --test-reporter=tap tests/browser/portal.test.cjs tests/browser/demo.test.cjs tests/browser/workflows.test.cjs",
+      "startedAt": "2026-11-18T19:29:20.859Z",
+      "durationMs": 31960,
+      "exitCode": 0,
+      "logFile": "15-browser.log"
+    }
+  ]
+}

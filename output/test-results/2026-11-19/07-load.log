@@ -1,0 +1,7 @@
+.env.test not found. Continuing without it.
+Alumni portal listening on port 63628
+{"wave":"one-seat burst","users":1000,"errors":0,"p50ms":13620,"p95ms":18737,"p99ms":19155,"requestsPerSecond":52,"elapsedMs":19303,"p95BudgetMs":10000}
+one-seat burst missed its error or latency target 
+{"confirmed":1,"waitlisted":999,"distinctTickets":999}
+{"wave":"mixed reads","users":1000,"errors":0,"p50ms":1824,"p95ms":2428,"p99ms":2459,"requestsPerSecond":398,"elapsedMs":2510,"p95BudgetMs":10000}
+Post-load health passed

@@ -1,0 +1,13 @@
+{
+  "mysql": "8.4.13",
+  "mongodb": "8.0.38",
+  "localMembers": 29,
+  "mentorsWithoutAvailability": 0,
+  "visibleSeedLabels": 0,
+  "livePortal": "http://localhost:3001",
+  "health": true,
+  "ownOpportunityRead": 200,
+  "ownOpportunityCount": 1,
+  "mentorValidationStatus": 422,
+  "dataProvenance": "Synthetic people, events, companies and conversations retained in metadata."
+}

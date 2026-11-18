@@ -1,0 +1,321 @@
+.env.test not found. Continuing without it.
+FAIL integration tests/integration/seed.test.js
+  ● demo seeding recovers from partial failure and preserves edits, accounts and booking actions on rerun
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+        "announcements": 6,
+    -   "bookings": 55,
+    -   "events": 9,
+    +   "bookings": 91,
+    +   "events": 16,
+        "jobs": 6,
+        "members": 28,
+        "mentors": 12,
+      }
+
+      24 |   await expect(seedDemo(offline, { password: f.password })).rejects.toThrow('interrupted seed')
+      25 |   const result = await seedDemo(f.db, { password: f.password })
+    > 26 |   expect(result).toMatchObject({ members: 28, mentors: 12, events: 9, bookings: 55, announcements: 6, jobs: 6 })
+         |                  ^
+      27 |   expect(result.messages).toBe(304)
+      28 |   const [[after]] = await f.db.sql.execute('SELECT * FROM members WHERE id=?', [existing.id])
+      29 |   expect(after).toEqual(original)
+
+      at Object.toMatchObject (tests/integration/seed.test.js:26:18)
+
+FAIL web tests/web/careers.test.js
+  ● career discovery sends filters and a role opens a credited demo detail with a messaging action
+
+    TestingLibraryElementError: Unable to find an element with the text: /organisation, role and compensation are fictional/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body[39m
+      [33mstyle[39m=[32m"overflow: hidden;"[39m
+    [36m>[39m
+      [36m<div>[39m
+        [36m<section[39m
+          [33maria-label[39m=[32m"Alumni opportunities"[39m
+          [33mclass[39m=[32m"career-listings"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"panel career-filters"[39m
+          [36m>[39m
+            [36m<label>[39m
+              [0mSearch opportunities[0m
+              [36m<input[39m
+                [33mmaxlength[39m=[32m"120"[39m
+                [33mplaceholder[39m=[32m"Role, company or field"[39m
+                [33mvalue[39m=[32m"Backend"[39m
+              [36m/>[39m
+            [36m</label>[39m
+            [36m<label>[39m
+              [0mJob location[0m
+              [36m<input[39m
+                [33mmaxlength[39m=[32m"100"[39m
+                [33mplaceholder[39m=[32m"City or Remote"[39m
+                [33mvalue[39m=[32m"New Delhi"[39m
+              [36m/>[39m
+            [36m</label>[39m
+            [36m<label>[39m
+              [0mEmployment type[0m
+              [36m<select>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m""[39m
+                [36m>[39m
+                  [0mAll types[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"full_time"[39m
+                [36m>[39m
+                  [0mFull-time[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"internship"[39m
+                [36m>[39m
+                  [0mInternship[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"contract"[39m
+                [36m>[39m
+                  [0mContract[0m
+                [36m</option>[39m
+              [36m</select>[39m
+            [36m</label>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"career-grid"[39m
+          [36m>[39m
+            [36m<article[39m
+              [33mclass[39m=[32m"panel career-card"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"career-card-top"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"status-badge"[39m
+                [36m>[39m
+                  [0mFull-time[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<h2>[39m
+                [0mBackend Engineer[0m
+              [36m</h2>[39m
+              [36m<strong>[39m
+                [0mDemo Labs[0m
+              [36m</strong>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"career-location"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"icon"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"1.6"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0 M12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [0mNew Delhi[0m
+                [0m · [0m
+                [0mHybrid[0m
+              [36m</p>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"academic-tags"[39m
+              [36m>[39m
+                [36m<span>[39m
+                  [0mNode.js[0m
+                [36m</span>[39m
+                [36m<span>[39m
+                  [0mMySQL[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"career-salary"[39m
+              [36m>[39m
+                [0mSample compensation[0m
+              [36m</p>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"career-card-bottom"[39m
+              [36m>[39m
+                [36m<small>[39m
+                  [0mShared by [0m
+                  [0mDemo Mentor[0m
+                [36m</small>[39m
+                [36m<button[39m
+                  [33maria-label[39m=[32m"View Backend Engineer"[39m
+                  [33mclass[39m=[32m"text-button"[39m
+                [36m>[39m
+                  [0mView opportunity [0m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"icon"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"1.6"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [36m>[39m
+                    [36m<path[39m
+                      [33md[39m=[32m"M5 12h14 M14 7l5 5-5 5"[39m
+                    [36m/>[39m
+                  [36m</svg>[39m
+                [36m</button>[39m
+              [36m</div>[39m
+            [36m</article>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"pagination"[39m
+          [36m/>[39m
+          [36m<dialog[39m
+            [33maria-label[39m=[32m"Backend Engineer"[39m
+            [33mopen[39m=[32m""[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"dialog-heading"[39m
+            [36m>[39m
+              [36m<h2>[39m
+                [0mBackend Engineer[0m
+              [36m</h2>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Close dialog"[39m
+                [33mclass[39m=[32m"icon-button"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"icon"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"1.6"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M6 6l12 12 M6 18L18 6"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</button>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"job-details"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [36m<strong>[39m
+                  [0mDemo Labs[0m
+                [36m</strong>[39m
+                [0m · [0m
+                [0mNew Delhi[0m
+                [0m · [0m
+                [0mHybrid[0m
+              [36m</p>[39m
+              [36m<p>[39m
+                [0mFictional role description[0m
+              [36m</p>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"academic-tags"[39m
+              [36m>[39m
+                [36m<span>[39m
+                  [0mNode.js[0m
+                [36m</span>[39m
+                [36m<span>[39m
+                  [0mMySQL[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<p>[39m
+                [0mSample compensation[0m
+              [36m</p>[39m
+              [36m<p>[39m
+                [0mCloses [0m
+                [0m1 Jan 2099[0m
+              [36m</p>[39m
+              [36m<p>[39m
+                [0mShared by Demo Mentor[0m
+              [36m</p>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"card-actions"[39m
+              [36m>[39m
+                [36m<button>[39m
+                  [0mMessage alumnus [0m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"icon"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"1.6"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [36m>[39m
+                    [36m<path[39m
+                      [33md[39m=[32m"M21 11a9 9 0 0 1-9 9H3l2-4a9 9 0 1 1 16-5z M8 11h.01 M12 11h.01 M16 11h.01"[39m
+                    [36m/>[39m
+                  [36m</svg>[39m
+                [36m</button>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</dialog>[39m
+        [36m</section>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      27 |   fireEvent.click(await screen.findByRole('button', { name: 'View Backend Engineer' }))
+      28 |   expect(screen.getByRole('dialog', { name: job.title })).toBeTruthy()
+    > 29 |   expect(screen.getByText(/organisation, role and compensation are fictional/)).toBeTruthy()
+         |                 ^
+      30 |   fireEvent.click(screen.getByRole('button', { name: 'Close dialog' }))
+      31 |   expect(screen.queryByRole('dialog')).toBeNull()
+      32 |   fireEvent.click(screen.getByRole('button', { name: 'View Backend Engineer' }))
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at Object.<anonymous> (tests/web/careers.test.js:29:17)
+
+------------------|---------|----------|---------|---------|-----------------------------------------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                   
+------------------|---------|----------|---------|---------|-----------------------------------------------------
+All files         |   93.53 |    92.41 |   84.25 |   93.53 |                                                     
+ server           |   94.87 |    98.02 |      92 |   94.87 |                                                     
+  app.js          |   93.99 |    98.52 |     100 |   93.99 | 175-178,207-214,217,220-223                         
+  booking.js      |     100 |     90.9 |     100 |     100 | 19-20                                               
+  content.js      |   77.55 |      100 |   69.23 |   77.55 | 6-8,28-36,39-40,43-50                               
+  core.js         |     100 |      100 |     100 |     100 |                                                     
+  db.js           |   98.24 |    94.44 |     100 |   98.24 | 56                                                  
+  events.js       |     100 |      100 |     100 |     100 |                                                     
+  members.js      |     100 |      100 |     100 |     100 |                                                     
+ web/src          |   93.17 |    90.06 |   82.35 |   93.17 |                                                     
+  App.tsx         |    93.4 |    87.12 |   67.74 |    93.4 | 137-149,252,284,286,288-291,299-303,313-315,396-398 
+  Careers.tsx     |   61.17 |    83.87 |   52.63 |   61.17 | 31-42,49-50,121-123,129-136,141-188                 
+  Community.tsx   |   99.15 |    85.13 |   93.33 |   99.15 | 54,210-212                                          
+  Desk.tsx        |     100 |    93.54 |   92.85 |     100 | 72,150                                              
+  Institution.tsx |     100 |      100 |   92.85 |     100 |                                                     
+  Mentoring.tsx   |    9.21 |      100 |       0 |    9.21 | 7-19,21-76                                          
+  Portal.tsx      |   96.86 |    93.15 |   81.25 |   96.86 | 61-70,306-309,373                                   
+  Programme.tsx   |     100 |     90.9 |   89.47 |     100 | 43-52,61,243                                        
+  Theme.tsx       |   94.87 |    73.68 |   83.33 |   94.87 | 25-26,37-38                                         
+  shared.tsx      |     100 |    97.22 |     100 |     100 | 84                                                  
+  ui.tsx          |     100 |     87.5 |     100 |     100 | 43                                                  
+------------------|---------|----------|---------|---------|-----------------------------------------------------
+Jest: Coverage for statements (93.42%) does not meet "global" threshold (95%)
+Jest: Coverage for lines (93.42%) does not meet "global" threshold (95%)
+Jest: Coverage for functions (84.12%) does not meet "global" threshold (90%)
+Jest: Coverage for branches (90.9%) does not meet "./server/booking.js" threshold (100%)
+
+Test Suites: 2 failed, 9 passed, 11 total
+Tests:       2 failed, 88 passed, 90 total
+Snapshots:   0 total
+Time:        37.134 s
+Ran all test suites in 4 projects.
+Test results written to: output\test-results\2026-11-19\01-jest.json
