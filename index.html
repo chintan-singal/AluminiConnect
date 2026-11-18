@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/hero.css">
 <link rel="stylesheet" href="css/feed.css">
 <link rel="stylesheet" href="css/mentors.css">
+<link rel="stylesheet" href="css/giving.css">
 </head><body>
 <div class="layout">
 <aside>
@@ -48,10 +49,20 @@
     <div class="sh"><h2>Mentors you can reach</h2><a href="#mentors">Browse mentors</a></div>
     <div class="rail" id="mentorRail"></div>
   </section>
+  <section id="jobs">
+    <div class="sh"><h2>Jobs shared by alumni</h2><a href="#jobs">See all openings</a></div>
+    <div class="jobs" id="jobList"></div>
+  </section>
+  <section id="give" class="cols">
+    <div><div class="sh"><h2>Giving back</h2></div><div id="fundBox"></div></div>
+    <div><div class="sh"><h2>Find batchmates</h2></div>
+      <div class="empty">Search by name, batch or city to reconnect.<br><br><button class="btn" onclick="toast('Directory opens here once connected to your API')">Open directory</button></div></div>
+  </section>
 </main></div>
 <script src="js/data.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/profile.js"></script>
 <script src="js/feed.js"></script>
 <script src="js/mentors.js"></script>
+<script src="js/giving.js"></script>
 </body></html>
